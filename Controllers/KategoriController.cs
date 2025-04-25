@@ -31,12 +31,12 @@ public class KategoriController : Controller
     }
 
     [HttpPost]
-    public ActionResult Create(string kategoriAdi, string kategoriUrl)
+    public ActionResult Create(KategoriCreateModel model)
     {
         var entity = new Kategori
         {
-            KategoriAdi = kategoriAdi,
-            Url = kategoriUrl
+            KategoriAdi = model,
+            Url = model
         };
 
         _context.Kategoriler.Add(entity);
