@@ -35,8 +35,8 @@ public class KategoriController : Controller
     {
         var entity = new Kategori
         {
-            KategoriAdi = model,
-            Url = model
+            KategoriAdi = model.KategoriAdi,
+            Url = model.Url,
         };
 
         _context.Kategoriler.Add(entity);

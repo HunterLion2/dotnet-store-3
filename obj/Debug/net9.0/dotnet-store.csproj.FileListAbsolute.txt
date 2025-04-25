@@ -219,3 +219,4 @@
 /Users/HunterLion/Downloads/4_12_uygulama_urun_kayit-2/dotnet-store/obj/Debug/net9.0/dotnet-store.pdb
 /Users/HunterLion/Downloads/4_12_uygulama_urun_kayit-2/dotnet-store/obj/Debug/net9.0/dotnet-store.genruntimeconfig.cache
 /Users/HunterLion/Downloads/4_12_uygulama_urun_kayit-2/dotnet-store/obj/Debug/net9.0/ref/dotnet-store.dll
+/Users/HunterLion/Downloads/4_12_uygulama_urun_kayit-2/dotnet-store/obj/Debug/net9.0/dotnet-store.sourcelink.json

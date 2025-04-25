@@ -1,5 +1,5 @@
 namespace dotnet_store.Models;
-
+using System.ComponentModel.DataAnnotations;
 public class KategoriCreateModel
 {
     [Display(Name = "Kategori Adı")]

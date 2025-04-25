@@ -1,5 +1,6 @@
 using dotnet_store.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace dotnet_store.Controllers;
@@ -66,20 +67,32 @@ public class UrunController : Controller
 
     public ActionResult Create()
     {
+        // Buradaki Gibi de Olur
+        // ViewData["Kategoriler"] = _context.Kategoriler.toList();
+
+        // Buradaki Gibi De Olur
+        // ViewBag.Kategoriler = _context.Kategoriler.ToList();
+
+        ViewBag.Kategoriler = new SelectList( _context.Kategoriler.ToList(), "Id", "KategoriAdi");
+
+        
         return View();
     }
 
     [HttpPost]
-    public ActionResult Create(string urunAdi, string urunAciklama, double UrunFiyat)
+
+    // Aşşağıda ki Bind kısmı model içerisinde ki bilgilerden seçmece yapıp istediğimizi getirmemizi sağlar.
+    // public ActionResult Create([Bind("UrunAdi", "Aciklama")]UrunCreateModel model)
+    public ActionResult Create(UrunCreateModel model)
     {
         var entity = new Urun()
         {
-            UrunAdi = urunAdi,
-            Aciklama = urunAciklama,
-            Fiyat = UrunFiyat,
-            Aktif = true,
-            Anasayfa = true,
-            KategoriId = 1,
+            UrunAdi = model.UrunAdi,
+            Aciklama = model.Aciklama,
+            Fiyat = model.Fiyat,
+            Aktif = model.Aktif,
+            Anasayfa = model.Anasayfa,
+            KategoriId = model.KategoriId,
             Resim = "1.jpeg"
         };
 
