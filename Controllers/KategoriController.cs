@@ -71,6 +71,9 @@ public class KategoriController : Controller
 
             _context.SaveChanges();
 
+            // TempData buradaki bilgiyi başka bir controller da kullanabilmemizi sağlar.
+            TempData["Message"] = $"{model.KategoriAdi} Kategorisi Güncellendi";
+
             return RedirectToAction("Index");
         }
 

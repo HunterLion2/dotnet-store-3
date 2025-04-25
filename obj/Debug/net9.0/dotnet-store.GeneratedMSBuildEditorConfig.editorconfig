@@ -64,6 +64,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL0FkbWluL19BZG1pbkNhcmRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/HunterLion/Downloads/4_12_uygulama_urun_kayit-2/dotnet-store/Views/Shared/Partials/Admin/_Message.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL0FkbWluL19NZXNzYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/HunterLion/Downloads/4_12_uygulama_urun_kayit-2/dotnet-store/Views/Shared/Partials/Admin/_Navbar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL0FkbWluL19OYXZiYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
