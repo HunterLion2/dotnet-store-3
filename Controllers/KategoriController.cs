@@ -45,4 +45,36 @@ public class KategoriController : Controller
         return RedirectToAction("Index");
     }
 
+    // Aslında burada Kategoriler içerisinden aldığım bilgiyi Select seçeneği ile KategoriEditModel'e gönderip eşitletip sonrasında kullanıyorum bu sayede daha düzenli bir yapım oluyor.
+    public ActionResult Edit(int id) {
+        var entity = _context.Kategoriler.Select(i => new KategoriEditModel{
+            Id = i.Id,
+            KategoriAdi = i.KategoriAdi,
+            Url = i.Url
+        }).FirstOrDefault(i => i.Id == id);
+        return View(entity);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(int id, KategoriEditModel model)
+    {
+        if(id != model.Id) {
+            return NotFound();
+        }
+
+        var entity = _context.Kategoriler.FirstOrDefault(i => i.Id == model.Id);
+
+        if(entity != null) {
+
+            entity.KategoriAdi = model.KategoriAdi;
+            entity.Url = model.Url;
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        return View(model);
+    }
+
 }
